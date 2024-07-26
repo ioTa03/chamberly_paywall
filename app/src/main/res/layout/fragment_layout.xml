@@ -1,0 +1,426 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/nestedScrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="188dp"
+        android:padding="4dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="4dp"
+
+            android:scrollbarAlwaysDrawHorizontalTrack="true"
+            android:scrollbars="vertical">
+
+            <!-- Header Section -->
+
+            <com.example.attempt.ViewPagerIndicator
+                android:id="@+id/reviewViewPagerIndicator"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/viewPager22" />
+
+            <!--            <ImageView-->
+            <!--                android:id="@+id/imageView5"-->
+            <!--                android:layout_width="wrap_content"-->
+            <!--                android:layout_height="wrap_content"-->
+            <!--                android:layout_marginTop="24dp"-->
+            <!--                app:layout_constraintEnd_toEndOf="parent"-->
+            <!--                app:layout_constraintHorizontal_bias="0.497"-->
+            <!--                app:layout_constraintStart_toStartOf="parent"-->
+            <!--                app:layout_constraintTop_toBottomOf="@+id/recyclerViewNew"-->
+            <!--                app:srcCompat="@drawable/unlock_happiness" />-->
+
+            <!-- Plan Section -->
+            <!--            <ImageView-->
+            <!--                android:id="@+id/imageView4"-->
+            <!--                android:layout_width="wrap_content"-->
+            <!--                android:layout_height="wrap_content"-->
+            <!--                android:layout_marginTop="24dp"-->
+            <!--                app:layout_constraintEnd_toEndOf="parent"-->
+            <!--                app:layout_constraintStart_toStartOf="parent"-->
+            <!--                app:layout_constraintTop_toBottomOf="@+id/Unlock_happiness"-->
+            <!--                app:srcCompat="@drawable/makefriends" />-->
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/constraintLayout4"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:padding="8dp"
+                app:layout_constraintEnd_toEndOf="@+id/recyclerViewPlans"
+                app:layout_constraintStart_toStartOf="@id/recyclerViewPlans"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <ImageView
+                    android:id="@+id/imageView10"
+                    android:layout_width="159dp"
+                    android:layout_height="37dp"
+                    android:layout_marginStart="28dp"
+                    android:layout_marginTop="32dp"
+                    app:layout_constraintStart_toEndOf="@+id/close_button"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/cham1" />
+
+                <ImageView
+                    android:id="@+id/close_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="20dp"
+
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/cross" />
+
+                <ImageView
+                    android:id="@+id/imageView7"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="28dp"
+                    app:layout_constraintStart_toEndOf="@+id/imageView10"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/pluss" />
+
+                <ImageView
+                    android:id="@+id/imageView14"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/imageView7"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/star" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerViewPlans"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="28dp"
+                android:foregroundGravity="center"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.498"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/constraintLayout4"
+                app:layout_constraintWidth_percent="0.9" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerViewNew"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:foregroundGravity="center"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.498"
+                app:layout_constraintStart_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/recyclerViewPlans"
+                app:layout_constraintWidth_percent="0.9" />
+
+            <androidx.viewpager2.widget.ViewPager2
+                android:id="@+id/viewPager22"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginTop="36dp"
+
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/imageView17" />
+
+            <com.example.attempt.ViewPagerIndicator
+                android:id="@+id/viewPager22Indicator"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/viewPager22" />
+
+            <androidx.viewpager2.widget.ViewPager2
+                android:id="@+id/viewPager"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_marginTop="16dp"
+                android:padding="10dp"
+                app:layout_constraintEnd_toEndOf="@+id/Scrolltocompare"
+                app:layout_constraintStart_toStartOf="@+id/Scrolltocompare"
+                app:layout_constraintTop_toBottomOf="@+id/VentText" />
+
+            <com.example.attempt.ViewPagerIndicator
+                android:id="@+id/viewPagerIndicator"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/viewPager" />
+
+            <!--            <ImageView-->
+            <!--                android:id="@+id/imageView18"-->
+            <!--                android:layout_width="match_parent"-->
+            <!--                android:layout_height="wrap_content"-->
+            <!--                app:srcCompat="@drawable/unlock_happiness_with_advanced_features"-->
+            <!--                tools:layout_editor_absoluteX="4dp"-->
+            <!--                tools:layout_editor_absoluteY="755dp" />-->
+
+            <!--            <ImageView-->
+            <!--                android:id="@+id/imageView19"-->
+            <!--                android:layout_width="185dp"-->
+            <!--                android:layout_height="41dp"-->
+            <!--                app:srcCompat="@drawable/scroll_to_compare_plans"-->
+            <!--                tools:layout_editor_absoluteX="109dp"-->
+            <!--                tools:layout_editor_absoluteY="674dp" />-->
+
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/featureComparisonRecyclerView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:nestedScrollingEnabled="false"
+                android:paddingTop="10dp"
+                app:layout_constraintEnd_toEndOf="@+id/ratingPoints"
+                app:layout_constraintStart_toStartOf="@+id/ratingPoints"
+                app:layout_constraintTop_toBottomOf="@+id/AdvancedFeatures" />
+
+
+            <ImageView
+                android:id="@+id/imageView16"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="0dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/Ratinghe"
+                app:srcCompat="@drawable/stars" />
+
+            <ImageView
+                android:id="@+id/imageView17"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.505"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/imageView16"
+                app:srcCompat="@drawable/on_app_store" />
+
+            <TextView
+                android:id="@+id/Unlock_happiness"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:text="Unlock Happiness"
+                android:textAlignment="center"
+                android:fontFamily="@font/sf_pro_display_bold"
+                android:textSize="22sp"
+                android:textStyle="normal"
+                android:fontWeight="500"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/recyclerViewNew" />
+
+            <TextView
+                android:id="@+id/VentText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:text="Connect. Vent. Make Friends"
+                android:textColor="@color/text_primary"
+                android:textAlignment="center"
+                android:fontFamily="@font/sf_pro_display_bold"
+                android:textSize="22sp"
+                android:textStyle="normal"
+                android:fontWeight="700"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.498"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/Unlock_happiness" />
+
+            <TextView
+                android:id="@+id/Scrolltocompare"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="Scroll to compare plans"
+                android:textColor="@color/text_primary"
+                android:fontFamily="@font/sf_pro_display"
+                android:textSize="17sp"
+                android:textStyle="normal"
+                android:fontWeight="500"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.498"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/viewPager" />
+
+            <TextView
+                android:id="@+id/AdvancedFeatures"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="40dp"
+                android:text="Unlock Happiness with Advanced Features"
+                android:textAlignment="center"
+                android:fontFamily="@font/sf_pro_display_bold"
+                android:textSize="24sp"
+                android:textStyle="normal"
+                android:fontWeight="700"
+
+                android:letterSpacing="0.06"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.498"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/Scrolltocompare" />
+
+            <TextView
+                android:id="@+id/ratingPoints"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="44dp"
+                android:text="4.8"
+                android:textSize="64sp"
+                android:padding="4dp"
+                android:textColor="@color/text_primary"
+                android:gravity="center"
+                android:fontFamily="@font/sf_pro_display_bold"
+
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.501"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/featureComparisonRecyclerView" />
+
+            <TextView
+                android:id="@+id/Ratinghe"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="0dp"
+                android:text="Rating"
+                android:padding="2dp"
+                android:textColor="@color/text_primary"
+                android:textAlignment="center"
+                android:fontFamily="@font/sf_pro_display"
+                android:textSize="26sp"
+                android:textStyle="normal"
+
+                android:fontWeight="500"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.501"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/ratingPoints" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout"
+        android:layout_width="match_parent"
+        android:layout_height="184dp"
+        android:layout_gravity="bottom"
+        android:background="#F2F2FF">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="25dp"
+            android:background="#F2F2FF"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+
+            <Button
+                android:id="@+id/trialButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/button_background"
+                android:fontFamily="@font/sf_pro_display"
+                android:gravity="center"
+                android:letterSpacing="0.18"
+                android:padding="0dp"
+                android:paddingStart="60dp"
+                android:paddingEnd="60dp"
+                android:text="Start my Free Trial"
+                android:textAlignment="center"
+                android:textAllCaps="false"
+                android:textColor="#2E2E5B"
+                android:textSize="16sp"
+                android:textStyle="normal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.491"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/trialmessage" />
+
+            <TextView
+                android:id="@+id/restorePurchase"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+
+                android:fontFamily="@font/sf_pro_display"
+                android:gravity="center"
+                android:letterSpacing="0.09"
+                android:padding="0dp"
+                android:text="Restore Purchase"
+                android:textAllCaps="false"
+                android:textSize="14sp"
+                android:textStyle="normal"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@id/trialButton"
+                app:layout_constraintStart_toStartOf="@id/trialButton"
+                app:layout_constraintTop_toBottomOf="@id/trialButton" />
+
+
+            <!--            <ImageView-->
+            <!--                android:id="@+id/trialmessage"-->
+            <!--                android:layout_width="match_parent"-->
+            <!--                android:layout_height="match_parent"-->
+            <!--                android:layout_marginTop="5dp"-->
+            <!--                android:src="@drawable/threedayfree"-->
+            <!--                app:layout_constraintEnd_toEndOf="parent"-->
+            <!--                app:layout_constraintStart_toStartOf="parent"-->
+            <!--                />-->
+            <TextView
+                android:id="@+id/trialmessage"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="3 day free trial, then\n39.00 kr per month. Cancel Anytime."
+                android:textAlignment="center"
+                android:textSize="18dp"
+                android:fontFamily="@font/sf_medium"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:srcCompat="@drawable/up_arrow"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
