@@ -88,7 +88,7 @@ class FeatureComparisonAdapter(private val features: List<FeatureRow>) :
 //                    }
             }
             is SeeMoreViewHolder -> {
-                holder.seeMoreText.text = if (expandedList) "See Less" else "See More"
+                holder.seeMoreText.text = if (expandedList) "Collapse" else "See More"
                 holder.seeMoreText.setOnClickListener {
                     val wasExpanded = expandedList
                     expandedList = !expandedList

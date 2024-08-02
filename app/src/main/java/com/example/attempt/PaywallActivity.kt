@@ -136,7 +136,7 @@ class PaywallActivity : AppCompatActivity() {
     private fun setupPlans() {
         plans = listOf(
             Plan("YEARLY PLAN", "360KR", "30 kr/month\nFree 7-days trial", true),
-            Plan("MONTHLY PLAN", "39KR", "39 kr/month\nFree 3-days trial", false),
+//            Plan("MONTHLY PLAN", "39KR", "39 kr/month\nFree 3-days trial", false),
 //            Plan("MONTHLY PLAN", "39KR", "39 kr/month\nFree 3-days trial", false),
 //            Plan("SURPRISE 1", "16KR", "16 kr/month\nFree 3-days trial", false)
 
@@ -229,12 +229,10 @@ class PaywallActivity : AppCompatActivity() {
         viewPager.setCurrentItem(startPosition, false)
 
         val reviews = listOf(
-            Review("Useful app for anonymous chatting", "Its a really nice app to chat anonymously with people around the world and it helps you vent out with people without getting judged by them.", "By anshoool, 05/06/2024"),
-            Review("Chamberly: Your Digital Haven for Emotional Release", "This app has been helpful to me. Knowing there's always someone to talk to, 24x7, has brought me comfort during times when I needed someone. I'm appreciate the support it provides. I can recommend it!", "Sampadb, 03/04/2024"),
-            Review("Useful app for anonymous chatting", "Its a really nice app to chat anonymously with people around the world and it helps you vent out with people without getting judged by them.", "By anshoool, 05/06/2024"),
-            Review("Saviour Hello application", "This app has helped in creating a safe space for people to come This app has helped in creating a safe space for people to come a and talk their heart out. Thank you team for bringing such a beautiful initiative to reality and ensuring mental wellbeing of its users\uD83D\uDC4F Wish you snuggly hug from my side\uD83D\uDC3C", "all_love❤️, 18/01/2022")
+            Review("Useful app for anonymous chatting", "Its a really nice app to chat anonymously with people around the world. It helps you vent out with people without the feeling of being judged. I highly recommend this app!!! If you join, you'll probably match with me. I'm here all the time :))", "Anonymous User, 05/06/2024"),
+            Review("Ahh, this helps so much", "This app has been helpful to me. Knowing there's always someone to talk to 24/7 has brought me comfort many times when I needed someone. I really appreciate the support it's been giving me. Chamberly is my best friend ❤️", "Anonymous User, 03/04/2024"),
+            Review("This saved me 💞", "This app has the perfect safe space I was looking for. I remember joining this app when my world was so blurry. I met my best friend in here and we always look out for each other", "Anonymous User, 18/01/2024")
         )
-
         reviewPagerAdapter = ReviewPagerAdapter(reviews)
         viewPager2.adapter = reviewPagerAdapter
         reviewViewPagerIndicator.setIndicatorCount(reviews.size)
@@ -264,16 +262,16 @@ class PaywallActivity : AppCompatActivity() {
         features = listOf(
             FeatureRow("                             ", FeatureValue.Free, FeatureValue.Paid),
 
-            FeatureRow("Direct messaging", FeatureValue.Check, FeatureValue.Check),
-            FeatureRow("Unlimited topics", FeatureValue.Lock, FeatureValue.Check),
-            FeatureRow("Super badges", FeatureValue.Lock, FeatureValue.Integer(10)),
-            FeatureRow("Access to AI listener™", FeatureValue.Integer(160), FeatureValue.Infinity),
-            FeatureRow("Chat with Pupil", FeatureValue.Text("Limited"), FeatureValue.Infinity),
-            FeatureRow("Follow communities", FeatureValue.Text("Limited"), FeatureValue.Infinity),
-            FeatureRow("Backdated journal entries & insight", FeatureValue.Text("Limited"), FeatureValue.Check),
-            FeatureRow("Curated reading/listening materials", FeatureValue.Text("Limited"), FeatureValue.Check),
-            FeatureRow("Back dated journal insights", FeatureValue.Lock, FeatureValue.Check),
-            FeatureRow("Unlimited Avatars", FeatureValue.Lock, FeatureValue.Check),
+            FeatureRow("Sending messages", FeatureValue.Text("Limited"), FeatureValue.Infinity),
+            FeatureRow("Chats", FeatureValue.Text("Limited"), FeatureValue.Infinity),
+            FeatureRow("Premium Matching Quality and Speed", FeatureValue.Lock, FeatureValue.Check),
+            FeatureRow("Message all Missed Matches Directly For 0 Coins", FeatureValue.Integer(5), FeatureValue.Integer(0)),
+            FeatureRow("Premium Avatars", FeatureValue.Lock, FeatureValue.Infinity),
+            FeatureRow("Exclusive Supported Badge + 200 coins", FeatureValue.Lock, FeatureValue.Check),
+            FeatureRow("Coins Received Daily", FeatureValue.Integer(15), FeatureValue.Integer(30)),
+            FeatureRow("Image Sharing Capabilities", FeatureValue.Lock, FeatureValue.Check),
+            FeatureRow("Advanced Journal", FeatureValue.Text("Limited"), FeatureValue.Check),
+            FeatureRow("Advanced Plupi", FeatureValue.Text("Limited"), FeatureValue.Check),
             FeatureRow("Direct messaging to contributors", FeatureValue.Lock, FeatureValue.Check)
         )
 
